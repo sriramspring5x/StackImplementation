@@ -16,7 +16,7 @@ import java.util.List;
 
 public class binaryPatternMatching {
 
-    int binaryPatternMatching(String pattern, String s) {
+   static int binaryPatternMatching(String pattern, String s) {
         List<Character> binaryPattern = getPatternInBinary(s);
         int match = 0;
         int size = s.length()-pattern.length();
@@ -37,7 +37,7 @@ public class binaryPatternMatching {
         return match;
     }
 
-    List<Character> getPatternInBinary(String s) {
+    static List<Character> getPatternInBinary(String s) {
         List<Character> binary = new ArrayList<>();
         int size = s.length();
         for(int i=0; i<size; i++) {
@@ -48,5 +48,11 @@ public class binaryPatternMatching {
         }
 
         return binary;
+    }
+
+    public static void main(String[] args) {
+       System.out.println(binaryPatternMatching("100","beiouy"));
+
+        System.out.println(binaryPatternMatching("010","bebiobuybe"));
     }
 }
